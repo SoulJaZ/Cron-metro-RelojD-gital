@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -82,10 +83,39 @@
         placeholder="Ss"
         readonly
       />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronómetro</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+<body class="m-0 w-screen h-screen grid place-item-center overflow-hidden bg-black flex justify-center items-center">
+    
+    <!-- Contenedor del reloj dígital.-->
+    <div id="watch" class="flex items-center justify-center w-48 h-48 border-2 border-cyan-500 rounded-full font-mono text-2xl text-white">
+    </div>
+
+    <!-- Contendor de los bótones (Agregar cronómetro, Detener, Seguir, Cerrar.)-->
+    <div class="grid grid-cols-4 gap-1 bg-black mb-4">
+        <button id="btn-agregar" class="col-span-2 bg-green-300 hover:bg-green-500 p-3 rounded text-black font-bold text-xl border-4px-solid border-4 rounded border-cyan-300" >Agregar temporizador</button>
+        <button class="col-span-2 bg-red-400 hover:bg-red-500 p-3 rounded text-black font-bold text-xl border-4 rounded">Detener</button>
+        <button class="col-span-2 bg-yellow-300 hover:bg-yellow-500 p-3 rounded text-black font-bold text-xl border-4 rounded" border-4px-solid border-4 rounded>Seguir</button>
+        <button class="col-span-2 bg-black hover:bg-gray-500 p-3 rounded text-blackfont-bold text-xl text-white border-4 rounded-full" border-4px-solid border-4 rounded>Cerrar</button>
+    </div>
+
+    <!-- Contendor de inputs que muestran los valores de HH, MM, SS-->
+    <div class="grid grid-cols-3 gap-1">
+        <input type="text" name="" id="displayNuevaHH" class=" border rounded p-1 text-right" placeholder="Hh" readonly>
+        <input type="text" name="" id="displayNuevoMM" class=" border rounded p-1 text-right" placeholder="Mm" readonly>
+        <input type="text" name="" id="displayNuevoSS" class=" border rounded p-1 text-right" placeholder="Ss" readonly>
+
     </div>
 
     <!-- Contendor de bótones del teclado (Números.)-->
     <div class="mb-1 grid grid-cols-3 gap-1 mb-1">
+
       <button
         class="bg-gray-200 hover:bg-gray-300 p-4 rounded text-gray-700 font-bold text-lg"
         onclick="actualizarDisplayCronometros('1')"
@@ -165,3 +195,30 @@
     <script src="controlador.js"></script>
   </body>
 </html>
+
+        
+        <button class="bg-gray-200 hover:bg-gray-300 p-4 rounded text-gray-700 font-bold text-lg" onclick="actualizarDisplayCronometros('1')">1</button>
+        <button class="bg-gray-200 hover:bg-gray-300 p-4 rounded text-gray-700 font-bold text-lg" onclick="actualizarDisplayCronometros('2')">2</button>
+        <button class="bg-gray-200 hover:bg-gray-300 p-4 rounded text-gray-700 font-bold text-lg" onclick="actualizarDisplayCronometros('3')">3</button>
+        <button class="bg-gray-200 hover:bg-gray-300 p-4 rounded text-gray-700 font-bold text-lg" onclick="actualizarDisplayCronometros('4')">4</button>
+        <button class="bg-gray-200 hover:bg-gray-300 p-4 rounded text-gray-700 font-bold text-lg" onclick="actualizarDisplayCronometros('5')">5</button>
+        <button class="bg-gray-200 hover:bg-gray-300 p-4 rounded text-gray-700 font-bold text-lg" onclick="actualizarDisplayCronometros('6')">6</button>
+        <button class="bg-gray-200 hover:bg-gray-300 p-4 rounded text-gray-700 font-bold text-lg" onclick="actualizarDisplayCronometros('7')">7</button>
+        <button class="bg-gray-200 hover:bg-gray-300 p-4 rounded text-gray-700 font-bold text-lg" onclick="actualizarDisplayCronometros('8')">8</button>
+        <button class="bg-gray-200 hover:bg-gray-300 p-4 rounded text-gray-700 font-bold text-lg" onclick="actualizarDisplayCronometros('9')">9</button>
+        <button class="bg-gray-200 hover:bg-gray-300 p-4 rounded text-gray-700 font-bold text-lg" onclick="actualizarDisplayCronometros('00')">00</button>
+        <button class="bg-gray-200 hover:bg-gray-300 p-4 rounded text-gray-700 font-bold text-lg" onclick="actualizarDisplayCronometros('0')">0</button>
+        <button class="bg-gray-200 hover:bg-gray-300 p-4 rounded text-gray-700 font-bold text-lg" onclick="actualizarDisplayCronometros('Borrar')">Borrar</button>
+
+        
+    </div>
+
+    <!-- Contendor de cronómetros-->
+    <div id="cronometros-contenedor" class="text-white mt-4">
+        
+    </div>
+    
+    <script src="controlador.js"></script>
+</body>
+</html>
+
